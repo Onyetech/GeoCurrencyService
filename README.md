@@ -4,9 +4,9 @@
 KlashaGeoCurrencyService is a Spring Boot-based RESTful API designed to fulfill the technical evaluation criteria for the Backend Engineer role at Klasha. The application serves as a centralized backend service that interacts with public APIs to fetch and process geographic and financial data for multiple countries. It offers a range of endpoints for clients to request specific data related to countries, their cities, states, and currencies.
 
 ## Target Users:
-Technical evaluators for the Backend Engineer role at Klasha
-Developers seeking to integrate country-specific data into their applications
-Any user interested in geographic and financial information
+Technical evaluators for the Backend Engineer role at Klasha.
+Developers seeking to integrate country-specific data into their applications.
+Any user interested in geographic and financial information.
 
 ## Core Functionalities:
 Most Populated Cities: Fetch and return a list of 'N' most populated cities from Italy, New Zealand, and Ghana, sorted in descending order based on population.

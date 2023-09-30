@@ -1,18 +1,21 @@
 package com.klasher.KlashaGeoCurrencyService.dto.res.response;
 
 import com.klasher.KlashaGeoCurrencyService.dto.req.request.CityDataDto;
+import com.klasher.KlashaGeoCurrencyService.dto.req.request.CityPopulationDto;
+import com.klasher.KlashaGeoCurrencyService.dto.req.request.CountryPositionDto;
 
 import java.util.List;
 
-public class ApiResponse {
+public class ApiResponse<T> {
+
     private boolean error;
     private String msg;
-    private List<CityDataDto> data;
+    private List<CountryPositionDto> data;
 
     public ApiResponse() {
     }
 
-    public ApiResponse(boolean error, String msg, List<CityDataDto> data) {
+    public ApiResponse(boolean error, String msg, List<CityPopulationDto> data) {
         this.error = error;
         this.msg = msg;
         this.data = data;
@@ -34,11 +37,11 @@ public class ApiResponse {
         this.msg = msg;
     }
 
-    public List<CityDataDto> getData() {
+    public List<CityPopulationDto> getData() {
         return data;
     }
 
-    public void setData(List<CityDataDto> data) {
+    public void setData(List<CityPopulationDto> data) {
         this.data = data;
     }
 

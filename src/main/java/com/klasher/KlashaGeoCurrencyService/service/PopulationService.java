@@ -6,4 +6,5 @@ import java.util.Map;
 public interface PopulationService {
     List<Map<String, Object>> getTopNCitiesByPopulation(int N);
 
+
 }

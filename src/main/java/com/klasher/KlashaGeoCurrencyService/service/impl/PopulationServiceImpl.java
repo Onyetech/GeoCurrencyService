@@ -19,11 +19,17 @@ public class PopulationServiceImpl implements PopulationService {
     @Override
     public List<Map<String, Object>> getTopNCitiesByPopulation(int N) {
         RestTemplate restTemplate = new RestTemplate();
-        ApiResponse response = restTemplate.getForObject(apiUrl, ApiResponse.class);
+        ApiResponse<?> response = restTemplate.getForObject(apiUrl, ApiResponse.class);
+
+        if (response == null || response.getData() == null) {
+            return Collections.emptyList();
+        }
+
+        List<CityDataDto> cities = (List<CityDataDto>) response.getData();
 
         List<Map<String, Object>> resultList = new ArrayList<>();
 
-        for (CityDataDto cityData : response.getData()) {
+        for (CityDataDto cityData : cities) {
             String country = cityData.getCountry();
 
             if ("Italy".equals(country) || "New Zealand".equals(country) || "Ghana".equals(country)) {
@@ -43,4 +49,3 @@ public class PopulationServiceImpl implements PopulationService {
         return resultList.subList(0, Math.min(N, resultList.size()));
     }
 }
-

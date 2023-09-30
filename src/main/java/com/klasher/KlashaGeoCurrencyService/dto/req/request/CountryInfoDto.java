@@ -1,4 +1,4 @@
-package com.klasher.KlashaGeoCurrencyService.dto.res.response;
+package com.klasher.KlashaGeoCurrencyService.dto.req.request;
 
 public class CountryInfoDto {
     private double latitude;

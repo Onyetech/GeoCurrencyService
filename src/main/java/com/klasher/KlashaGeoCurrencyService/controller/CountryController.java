@@ -2,7 +2,7 @@ package com.klasher.KlashaGeoCurrencyService.controller;
 
 import com.klasher.KlashaGeoCurrencyService.dto.req.request.*;
 import com.klasher.KlashaGeoCurrencyService.dto.res.response.ApiResponse;
-import com.klasher.KlashaGeoCurrencyService.dto.res.response.CountryInfoDto;
+import com.klasher.KlashaGeoCurrencyService.dto.req.request.CountryInfoDto;
 import com.klasher.KlashaGeoCurrencyService.service.CountryInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
